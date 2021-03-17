@@ -1,0 +1,29 @@
+.sobre-nosotros {
+    padding: $separacion 0;
+    @include tablet {
+        @include grid (2, $separacion);
+    }
+}
+
+.contenido-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+        font-size: 7rem;
+        color: $negro;
+    }
+    .fecha {
+        color: $rosa;
+        font-weight: $bold;
+    }
+    .texto {
+        line-height: 1.5;
+        color: $negro;
+        text-align: justify;
+    }
+}
+
+.nombre-escenario {
+    text-align: center;
+}

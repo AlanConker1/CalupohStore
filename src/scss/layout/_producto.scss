@@ -1,0 +1,67 @@
+.productos {
+    background-color: $negro;
+    padding: $separacion;
+    h2 {
+        font-size: 7rem;
+        color: $blanco;
+    }
+}
+
+.contenedor-productos {
+    @include tablet {
+        @include grid(2, $separacion)
+    }
+    .producto {
+        flex-shrink: 0;
+        /*Las siguientes tres lineas se pueden resumir en una sola
+    border-style: solid;
+    border-color: #B5B5B5;
+    border width: 1px;         */
+        border: 15px solid #B5B5B5;
+        /*Esta linea es lo mismo que las anteriores 3*/
+        background-color: $blanco;
+        /*Esta linea hace que se le agregue un fondo a cada una de los bordes*/
+        margin-bottom: 2rem;
+        img{
+            display: block;
+            margin: auto;
+            width: 500px;
+            height: 500px;
+        }
+    }
+    .contenido-producto {
+        
+        padding: 2rem;
+        h3 {
+            color: $negro;
+            font-size: 4rem;
+        }
+        p {
+            margin: 0;
+            color: $negro;
+            line-height: 2rem;
+            text-align:justify;
+        }
+        span {
+            color: $verde-fuerte;
+        }
+    }
+}
+
+.precios-caracteristicas {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    max-width: 500px;
+    
+}
+
+.precios-caracteristicas li {
+    display: flex;
+}
+
+.precios-caracteristicas li img {
+    margin-right: 2rem;
+}

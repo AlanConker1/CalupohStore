@@ -1,0 +1,63 @@
+.contacto {
+    background-color: $blanco;
+    padding: $separacion 0;
+    h2 {
+        color: $negro;
+        font-size: 7rem;
+    }
+}
+
+.contenedor-tabla {
+    @include tablet {
+        @include grid(2, $separacion/4)
+    }
+    .tabla {
+        padding-top: 1rem;
+    }
+    .nombre-tabla {
+        color: $negro;
+        font-size: 3rem;
+        font-weight: $bold;
+        text-align: center;
+        &:after {
+            content: '';
+            display: block;
+            margin: 1rem auto 0 auto;
+            background-size: 15rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+}
+
+.lista {
+    padding: 0;
+    list-style: none;
+    font-size: 2rem;
+    li {
+        padding: $separacion/2.55;
+        font-weight: $black;
+        span {
+            font-weight: $regular;
+        }
+    }
+}
+
+.bg-verde {
+    background-color: $verde;
+}
+
+.bg-verde .lista li:nth-child(odd) {
+    background-color: darken($verde, 10);
+}
+
+.lista i {
+    color: $negro;
+    margin-right: 20px;
+    font-size: 4rem;
+}
+
+.lista i:hover {
+    cursor: pointer;
+    color: $blanco;
+}
